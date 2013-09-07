@@ -1,17 +1,17 @@
-scriptcs-owin
-===============
+scriptcs-webapi-owin
+====================
 
-# Owin Self Host Script Pack
+# ASP.Net Webapi Owin Script Pack
 
 ## What is it?
-Makes using Owin self host with scriptcs
+Allows ASP.Net WebApi to be included as a Owin component with scriptcs
 
 ## Highlights:
 
-* Creates a self hosted OWIN http server host.
-* Allows instances of IOwinStartup to plug in other OWIN middleware components
+* Based on pre-release ASP.Net 2.0 daily build.
+* Includes dependancies for new ASP.Net 2.0 features (e.g. Routes, CORS, OData)
 
-## Getting started with OWIN using the pack
+## Getting started with ASP.Net Web Api using the pack
 
 ```csharp
 [Route("api/test")]
@@ -31,12 +31,11 @@ using ( webApi.CreateServer("http://localhost:8080", webApi) ) {
 }
 
 ```
+* Install the dependant packages ```scriptcs -install -pre```.
 * Running as admin type ```scriptcs start.csx``` to launch the app.
 * Open a browser to "http://localhost:8080/api/test";
-* That's it, your OWIN self is running with a webapi!
+* That's it, your ASP.Net controller is runnning with a OWIN self host server
 
-## Customizing
-You can customize the componants loaded by passing in additional IOwinStartup
 
 ## What's next
 TBD
